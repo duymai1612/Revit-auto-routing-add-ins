@@ -1,0 +1,104 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+    <Import Project="$(SolutionDir)CommonProjectProperties.prop" />
+
+    <PropertyGroup>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>Arent3d.Architecture.Routing.Mechanical.App</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <OutputPath>bin\$(ConfigMode)\$(RevitVersion)\</OutputPath>
+        <RevitPath>C:\Program Files\Autodesk\Revit $(RevitVersion)\</RevitPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Arent3d.Architecture.Routing.AppBase\Arent3d.Architecture.Routing.AppBase.csproj" />
+        <ProjectReference Include="..\Arent3d.Architecture.Routing\Arent3d.Architecture.Routing.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Arent3d.RevitAddinUtil, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.RevitAddinUtil.dll</HintPath>
+        </Reference>
+        <Reference Include="Arent3d.Math, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Math.dll</HintPath>
+        </Reference>
+        <Reference Include="Arent3d.Utility, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Utility.dll</HintPath>
+        </Reference>
+        <Reference Include="Arent3d.Revit, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Revit.dll</HintPath>
+        </Reference>
+        <Reference Include="Arent3d.Revit.Csv, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Revit.Csv.dll</HintPath>
+        </Reference>
+        <Reference Include="Arent3d.Revit.UI, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Revit.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="PresentationCore" />
+        <Reference Include="PresentationFramework" />
+        <Reference Include="RevitAPI">
+            <HintPath>$(RevitPath)RevitAPI.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="RevitAPIUI">
+            <HintPath>$(RevitPath)RevitAPIUI.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="AdWindows">
+            <HintPath>$(RevitPath)AdWindows.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Arent3d.Architecture.Routing.AppBase\Lang\en-US.plist">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Arent3d.Architecture.Routing.AppBase\Lang\ja-JP.plist">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Arent3d.Architecture.Routing.Mechanical.App\Lang\en-US.plist">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Arent3d.Architecture.Routing.Mechanical.App\Lang\ja-JP.plist">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Resource Include="resources\DeleteAllFrom-To.png" />
+        <Resource Include="resources\DeleteAllPS.png" />
+        <Resource Include="resources\DeleteFrom-To.png" />
+        <Resource Include="resources\ExportFromTo.png" />
+        <Resource Include="resources\ExportPS.png" />
+        <Resource Include="resources\From-ToWindow.png" />
+        <Resource Include="resources\ImportFromTo.png" />
+        <Resource Include="resources\ImportPS.png" />
+        <Resource Include="resources\Initialize-16.bmp" />
+        <Resource Include="resources\Initialize-32.bmp" />
+        <Resource Include="resources\Initialize.png" />
+        <Resource Include="resources\InsertBranchPoint.png" />
+        <Resource Include="resources\InsertPassPoint.png" />
+        <Resource Include="resources\MEP.ico" />
+        <Resource Include="resources\PickFrom-To.png" />
+        <Resource Include="resources\AutoRoutingSupplyAirGrill.png" />
+        <Resource Include="resources\Plans.png" />
+        <Resource Include="resources\ReplaceFromTo.png" />
+        <Resource Include="resources\RerouteAll.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="RoutingAppUI.Components.cs">
+            <DependentUpon>RoutingAppUI.cs</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <!--
+            <Exec Command="&quot;$(SolutionDir)lib\tools\ILMerge.exe&quot; /lib:&quot;$(RevitPath.TrimEnd('\'))&quot; /internalize:$(SolutionDir)nointernalize.txt /out:$(TargetPath) /wildcards &quot;$(TargetDir)*.dll&quot;" />
+        -->
+        <Exec Command="&quot;$(SolutionDir)lib\$(RevitVersion)\$(TargetFramework)\make_addin&quot; &quot;$(TargetPath)&quot;&#xD;&#xA;&#xD;&#xA;copy &quot;$(TargetDir)*.addin&quot; &quot;%25ProgramData%25\Autodesk\Revit\Addins\$(RevitVersion)\&quot;&#xD;&#xA;" />
+    </Target>
+
+</Project>

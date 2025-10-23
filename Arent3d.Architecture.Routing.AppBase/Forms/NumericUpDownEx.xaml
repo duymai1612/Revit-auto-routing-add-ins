@@ -1,0 +1,7 @@
+<controlLib:NumericUpDown x:Class="Arent3d.Architecture.Routing.AppBase.Forms.NumericUpDownEx"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:controlLib="clr-namespace:ControlLib;assembly=NumericUpDown"
+                          LostFocus="NumericUpDownEx_OnLostFocus"
+                          Focusable="False">
+</controlLib:NumericUpDown>

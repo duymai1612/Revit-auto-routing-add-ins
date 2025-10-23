@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="Arent3d.Architecture.Routing.AppBase.Forms.PassPointInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Arent3d.Architecture.Routing.AppBase.Forms"
+             xmlns:valueConverters="clr-namespace:Arent3d.Architecture.Routing.AppBase.Forms.ValueConverters"
+             mc:Ignorable="d"
+             d:DesignHeight="Auto" d:DesignWidth="Auto">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style TargetType="{x:Type Run}" x:Key="UnitStyle">
+                <Setter Property="Text" Value="&quot;"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding DisplayUnitSystem, RelativeSource={RelativeSource FindAncestor, AncestorType=local:FromToEditControl}}" Value="IMPERIAL">
+                        <Setter Property="Text" Value="&quot;"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding DisplayUnitSystem, RelativeSource={RelativeSource FindAncestor, AncestorType=local:FromToEditControl}}" Value="METRIC">
+                        <Setter Property="Text" Value="mm"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="White" Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Coordinates" FontSize="20" />
+        <Label Grid.Row="1" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <Run Text="X: " />
+                    <Run>
+                        <Run.Style>
+                            <Style TargetType="{x:Type Run}">
+                                <Setter Property="Text" Value="{Binding XPoint, RelativeSource={RelativeSource FindAncestor, AncestorType=local:PassPointInfo}, Converter={x:Static valueConverters:LengthToStringConverter.Default}}"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding DisplayUnitSystem, RelativeSource={RelativeSource FindAncestor, AncestorType=local:FromToEditControl}}" Value="IMPERIAL">
+                                        <Setter Property="Text" Value="{Binding XPoint, RelativeSource={RelativeSource FindAncestor, AncestorType=local:PassPointInfo}, Converter={x:Static valueConverters:LengthToStringConverter.Inches}}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding DisplayUnitSystem, RelativeSource={RelativeSource FindAncestor, AncestorType=local:FromToEditControl}}" Value="METRIC">
+                                        <Setter Property="Text" Value="{Binding XPoint, RelativeSource={RelativeSource FindAncestor, AncestorType=local:PassPointInfo}, Converter={x:Static valueConverters:LengthToStringConverter.Millimeters}}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Run.Style>
+                    </Run>
+                    <Run Style="{StaticResource UnitStyle}" />
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <Label Grid.Row="2" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <Run Text="Y: " />
+                    <Run>
+                        <Run.Style>
+                            <Style TargetType="{x:Type Run}">
+                                <Setter Property="Text" Value="{Binding YPoint, RelativeSource={RelativeSource FindAncestor, AncestorType=local:PassPointInfo}, Converter={x:Static valueConverters:LengthToStringConverter.Default}}"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding DisplayUnitSystem, RelativeSource={RelativeSource FindAncestor, AncestorType=local:FromToEditControl}}" Value="IMPERIAL">
+                                        <Setter Property="Text" Value="{Binding YPoint, RelativeSource={RelativeSource FindAncestor, AncestorType=local:PassPointInfo}, Converter={x:Static valueConverters:LengthToStringConverter.Inches}}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding DisplayUnitSystem, RelativeSource={RelativeSource FindAncestor, AncestorType=local:FromToEditControl}}" Value="METRIC">
+                                        <Setter Property="Text" Value="{Binding YPoint, RelativeSource={RelativeSource FindAncestor, AncestorType=local:PassPointInfo}, Converter={x:Static valueConverters:LengthToStringConverter.Millimeters}}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Run.Style>
+                    </Run>
+                    <Run Style="{StaticResource UnitStyle}" />
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <Label Grid.Row="3" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <Run Text="Z: " />
+                    <Run>
+                        <Run.Style>
+                            <Style TargetType="{x:Type Run}">
+                                <Setter Property="Text" Value="{Binding ZPoint, RelativeSource={RelativeSource FindAncestor, AncestorType=local:PassPointInfo}, Converter={x:Static valueConverters:LengthToStringConverter.Default}}"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding DisplayUnitSystem, RelativeSource={RelativeSource FindAncestor, AncestorType=local:FromToEditControl}}" Value="IMPERIAL">
+                                        <Setter Property="Text" Value="{Binding ZPoint, RelativeSource={RelativeSource FindAncestor, AncestorType=local:PassPointInfo}, Converter={x:Static valueConverters:LengthToStringConverter.Inches}}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding DisplayUnitSystem, RelativeSource={RelativeSource FindAncestor, AncestorType=local:FromToEditControl}}" Value="METRIC">
+                                        <Setter Property="Text" Value="{Binding ZPoint, RelativeSource={RelativeSource FindAncestor, AncestorType=local:PassPointInfo}, Converter={x:Static valueConverters:LengthToStringConverter.Millimeters}}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Run.Style>
+                    </Run>
+                    <Run Style="{StaticResource UnitStyle}" />
+                </TextBlock>
+            </Label.Content>
+        </Label>
+    </Grid>
+</UserControl>

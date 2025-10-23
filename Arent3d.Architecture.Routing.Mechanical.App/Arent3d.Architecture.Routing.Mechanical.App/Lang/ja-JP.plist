@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+    <dict>
+
+        <!-- Application UI Strings -->
+        <key>Mechanical.App.Routing.TabName</key>
+        <string>設備ルートアシスト</string>
+        
+        <key>Mechanical.App.Panels.Routing.Initialize</key>
+        <string>Setup</string>
+        
+        <key>Mechanical.App.Panels.Routing.Routing</key>
+        <string>From-To</string>
+
+        <key>Mechanical.App.Panels.Routing.TTE</key>
+        <string>TTE</string>        
+        
+        <key>Mechanical.App.Panels.Routing.PassPoints</key>
+        <string>通過点</string>
+        
+        <key>Mechanical.App.Panels.Routing.Racks</key>
+        <string>PS</string>
+        
+        <key>Mechanical.App.Panels.Routing.Monitor</key>
+        <string>Monitor Selection</string>
+
+        <!-- Application UI Button Strings -->
+        <key>Mechanical.App.Commands.BranchPoint.InsertBranchPointCommand</key>
+        <string>Insert&#xA;Branch Point</string>
+
+        <key>Mechanical.App.Commands.Initialization.InitializeCommand</key>
+        <string>Initialize</string>
+
+        <key>Mechanical.App.Commands.Initialization.ShowRoutingViewsCommand</key>
+        <string>Plans</string>
+          
+        <key>Mechanical.App.Commands.PassPoint.InsertPassPointCommand</key>
+        <string>Insert&#xA;Pass Point</string>
+
+        <key>Mechanical.App.Commands.Rack.EraseAllRacksCommand</key>
+        <string>Delete&#xA;All PS</string>
+          
+        <key>Mechanical.App.Commands.Rack.ExportRacksCommand</key>
+        <string>Export&#xA;PS</string>
+        
+        <key>Mechanical.App.Commands.Rack.ImportRacksCommand</key>
+        <string>Import&#xA;PS</string>
+
+        <key>Mechanical.App.Commands.Routing.AllReRouteCommand</key>
+        <string>Reroute&#xA;All</string>
+
+        <key>Mechanical.App.Commands.Routing.EraseAllRoutesCommand</key>
+        <string>Delete&#xA;All From-To</string>
+
+        <key>Mechanical.App.Commands.Routing.EraseSelectedRoutesCommand</key>
+        <string>Delete&#xA;From-To</string>
+
+        <key>Mechanical.App.Commands.Routing.ExportRoutingCommand</key>
+        <string>Export&#xA;From-To</string>
+        
+        <key>Mechanical.App.Commands.Routing.FileRoutingCommand</key>
+        <string>Import&#xA;From-To</string>
+
+        <key>Mechanical.App.Commands.Routing.PickAndReRouteCommand</key>
+        <string>Reroute&#xA;Selected</string>
+
+        <key>Mechanical.App.Commands.Routing.PickRoutingCommand</key>
+        <string>Pick&#xA;From-To</string>
+
+        <key>Mechanical.App.Commands.Routing.AutoRoutingSupplyAirGrillCommand</key>
+        <string>給気グリル&#xA;自動ルーティング</string>
+
+        <key>Mechanical.App.Commands.Routing.ReplaceFromToCommand</key>
+        <string>Replace&#xA;From-To</string>
+
+        <key>Mechanical.App.Commands.Selecting.GetSelectedFromToInfoCommand</key>
+        <string>Modify&#xA;From-To</string>
+
+        <key>Mechanical.App.Commands.Routing.ShowFrom_ToWindowCommand</key>
+        <string>From-To&#xA;Window</string>
+
+        <key>Mechanical.App.Commands.Routing.ShowFromTreeCommand</key>
+        <string>From-To&#xA;Tree</string>
+
+        <key>Mechanical.App.Commands.Routing.PickAndChangeFixedBopHeightCommand</key>
+        <string>Change&#xA;FixedBopHeight</string>
+
+        <key>Mechanical.App.Commands.Routing.CreateFASUAndVAVAutomaticallyCommand</key>
+        <string>FASU, VAV&#xA;自動配置</string>
+
+        <key>Mechanical.App.Commands.Routing.AutoRoutingVavCommand</key>
+        <string>AHU-VAV&#xA;自動ルーティング</string>
+
+        <key>Mechanical.App.Commands.Routing.AdjustDuctSizeCommand</key>
+        <string>ダクト径&#xA;自動調整</string>        
+
+        <!-- Transaction Names -->
+        <key>TransactionName.Commands.Initialization.Initialize</key>
+        <string>自動ルーティングをセットアップ</string>
+        <key>TransactionName.Commands.Initialization.CreateRoutingViews</key>
+        <string>ルーティング ビューを作成</string>
+
+        <key>TransactionName.Commands.Rack.EraseAll</key>
+        <string>全てのパイプスペースを削除</string>
+        <key>TransactionName.Commands.Rack.Import</key>
+        <string>パイプスペースの読込</string>
+
+        <key>TransactionName.Commands.Routing.Common.Routing</key>
+        <string>ルーティング</string>
+
+        <key>TransactionName.Commands.Routing.Common.ChangeColor</key>
+        <string>ハイライト用色変更</string>
+        <key>TransactionName.Commands.Routing.Common.RevertColor</key>
+        <string>ハイライト用色変更の解除</string>
+
+        <key>TransactionName.Commands.Routing.PickRouting</key>
+        <string>From-Toの作成</string>
+
+        <key>TransactionName.Commands.Routing.AutoRoutingSupplyAirGrill</key>
+        <string>給気グリル自動ルーティング</string>
+
+        <key>TransactionName.Commands.Routing.RoutingFromFile</key>
+        <string>From-Toの読込</string>
+
+        <key>TransactionName.Commands.Routing.PickAndReRoute</key>
+        <string>選択From-Toを再ルーティング</string>
+
+        <key>TransactionName.Commands.Routing.PickAndAdjustDuctSize</key>
+        <string>ダクト径調整</string>        
+
+        <key>TransactionName.Commands.Routing.RerouteAll</key>
+        <string>全て再ルーティング</string>
+
+        <key>TransactionName.Commands.Routing.ReplaceFromTo</key>
+        <string>From-Toの再接続</string>
+
+        <key>TransactionName.Commands.Routing.EraseSelectedRoutes</key>
+        <string>選択From-Toを削除</string>
+
+        <key>TransactionName.Commands.Routing.EraseAllRoutes</key>
+        <string>全てのFrom-Toを削除</string>
+
+        <key>TransactionName.Commands.Selecting.GetSelectedFromToInfo</key>
+        <string>選択From-Toウィンドウを表示</string>
+
+        <key>TransactionName.Commands.ShowFrom_ToWindowCommand</key>
+        <string>From-Toウィンドウを表示</string>
+
+        <key>TransactionName.Commands.ShowFromTreeCommand</key>
+        <string>From-Toツリーを表示</string>
+
+        <key>TransactionName.Commands.PostCommands.ApplyChangeRouteNameCommand</key>
+        <string>RouteNameを変更</string>
+
+        <key>TransactionName.Commands.Routing.PickAndChangeFixedBopHeightCommand</key>
+        <string>Route高さを変更</string>
+
+        <key>TransactionName.Commands.Routing.AutoRoutingVav</key>
+        <string>自動VAVsルーティング</string>
+
+        <!-- Dialogs -->
+        <key>Dialog.Commands.Initialization.Dialog.Title.Error</key>
+        <string>自動ルーティング初期化エラー</string>
+        <key>Dialog.Commands.Initialization.Dialog.Body.Error.FailedToSetup</key>
+        <string>幾つかのファミリーまたはパラメータの設定ができませんでした。</string>
+
+        <key>Dialog.Commands.Routing.PickRouting.PickFirst</key>
+        <string>From-Toの始点を選択してください。</string>
+        <key>Dialog.Commands.Routing.PickRouting.PickSecond</key>
+        <string>From-Toの終点を選択してください。</string>
+
+        <key>Dialog.Commands.Routing.PickAndReRoute.Pick</key>
+        <string>再ルーティングしたいFrom-Toを選択してください。</string>
+
+        <key>Dialog.Commands.Routing.ReplaceFromTo.Pick</key>
+        <string>始終点を変更したいFrom-Toを選択してください。</string>
+
+        <key>Dialog.Commands.Routing.ReplaceFromTo.SelectFromTo</key>
+        <string>変更したい始終点を選択してください。</string>
+
+        <key>Dialog.Commands.Routing.ReplaceFromTo.SelectEndPoint</key>
+        <string>新しい始終点を選択してください。</string>
+
+        <key>Dialog.Commands.Routing.FromTo.FileName</key>
+        <string>From-Toリスト ファイル</string>
+        <key>Dialog.Commands.Routing.FromTo.Title.Export</key>
+        <string>From-Toリストの保存</string>
+        <key>Dialog.Commands.Routing.FromTo.Title.Import</key>
+        <string>From-Toリストの読込</string>
+
+        <key>Dialog.Commands.PassPoint.Insert.Pick</key>
+        <string>通過点を挿入したいFrom-Toを選択してください。</string>
+
+        <key>Dialog.Commands.Routing.Common.Title.Error</key>
+        <string>ルーティング エラー</string>
+        <key>Dialog.Commands.Routing.Common.Body.Error.ExceptionOccured</key>
+        <string>未ハンドルの例外が発生しました。</string>
+        <key>Dialog.Commands.Routing.Common.Body.Error.DeletedSomeFailedElements</key>
+        <string>ルーティング時、一部の要素が作成できませんでした。&#xA;通過点を指定することでエラーのない形状を作成できます。</string>
+        <key>Dialog.Commands.Routing.Common.Body.Error.FittingCannotBeInserted</key>
+        <string>以下のコネクタに対し、継手要素が挿入できませんでした：&#xA;&#xA;{0}</string>
+
+        <key>Dialog.Forms.SelectedFromToBase.ChangeFromTo</key>
+        <string>From-To情報を変更しますか？&#xA;変更する場合、自動的に再ルーティングが行われます。</string>
+
+        <key>Dialog.Forms.FromToTree.Rename</key>
+        <string>名称が重複しているため、他の名称に変更してください。</string>
+
+        <key>Dialog.Forms.FromToEditControl.ProcessConstraints.None</key>
+        <string>どちらでもよい</string>
+        <key>Dialog.Forms.FromToEditControl.ProcessConstraints.NoPocket</key>
+        <string>よけない</string>
+        <key>Dialog.Forms.FromToEditControl.ProcessConstraints.NoDrainPocket</key>
+        <string>上に避ける</string>
+        <key>Dialog.Forms.FromToEditControl.ProcessConstraints.NoVentPocket</key>
+        <string>下に避ける</string>
+
+        <key>Dialog.Forms.FromToWindow.Title</key>
+        <string>配管From-To</string>
+
+        <key>Dialog.Forms.FromToTree.Title</key>
+        <string>配管From-To</string>
+        
+        <key>Dialog.Commands.Routing.AutoRouteVavs.PickRootConnector</key>
+        <string>自動VAVsルーティングの始点を選択してください。</string>
+
+        <!-- Parameter Names -->
+        <key>Revit.Property.Builtin.Width</key>
+        <string>幅</string>
+
+        <key>Revit.Property.Builtin.Height</key>
+        <string>高さ</string>
+
+        <key>Revit.Property.Builtin.Length</key>
+        <string>奥行き</string>
+
+        <key>Revit.Property.Builtin.DiameterR1</key>
+        <string>呼び径r1</string>
+
+        <key>Revit.Property.Builtin.DiameterR2</key>
+        <string>呼び径r2</string>
+
+        <key>Revit.Property.Builtin.DiameterR3</key>
+        <string>呼び径r3</string>
+
+        <key>Revit.Property.Builtin.OffsetWidth</key>
+        <string>オフセット幅</string>
+
+        <key>Revit.Property.Builtin.OffsetHeight</key>
+        <string>オフセット高さ</string>
+
+    </dict>
+</plist>
+

@@ -1,0 +1,30 @@
+﻿<Window x:Class="Arent3d.Architecture.Routing.Mechanical.App.Forms.SimpleRoutePropertyDialog"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:forms="clr-namespace:Arent3d.Architecture.Routing.Mechanical.App.Forms"
+      xmlns:forms1="clr-namespace:Arent3d.Architecture.Routing.AppBase.Forms;assembly=Arent3d.Architecture.Routing.AppBase"
+      mc:Ignorable="d"
+      Height="220" Width="630" Background="White"
+      WindowStartupLocation="CenterOwner"      
+      Title="RoutePropertyDialog">
+
+    <Grid  Background="White" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <forms:SimpleFromToEditControl x:Name="FromToEdit" Grid.Row="0" Width="Auto" />
+
+        <forms1:Dialog2Buttons Grid.Row="1" Margin="-2,5,0,0"
+                                  LeftButton="OK"
+                                  RightButton="Cancel"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Right"
+                                  LeftOnClick="Dialog2Buttons_OnLeftOnClick"
+                                  RightOnClick="Dialog2Buttons_OnRightOnClick"
+                                  IsEnableLeftButton="{Binding CanApply, ElementName=FromToEdit}" />
+    </Grid>
+</Window>

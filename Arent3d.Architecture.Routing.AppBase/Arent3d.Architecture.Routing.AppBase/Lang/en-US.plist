@@ -1,0 +1,249 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <!-- Application UI Strings -->
+        <key>App.Routing.TabName</key>
+        <string>Routing Assist</string>
+
+        <key>App.Panels.Routing.Initialize</key>
+        <string>Setup</string>
+
+        <key>App.Panels.Routing.Routing</key>
+        <string>Routing</string>
+
+        <key>App.Panels.Routing.PassPoints</key>
+        <string>Pass Points</string>
+
+        <key>App.Panels.Routing.Racks</key>
+        <string>Pipe Spaces</string>
+
+        <key>App.Panels.Routing.Monitor</key>
+        <string>Monitor Selection</string>
+
+
+        <!-- Application UI Button Strings -->
+        <key>App.Commands.BranchPoint.InsertBranchPointCommand</key>
+        <string>Insert&#xA;Branch Point</string>
+
+        <key>App.Commands.Initialization.InitializeCommand</key>
+        <string>Initialize</string>
+
+        <key>App.Commands.Initialization.ShowRoutingViewsCommand</key>
+        <string>Plans</string>
+
+        <key>App.Commands.PassPoint.InsertPassPointCommand</key>
+        <string>Insert&#xA;Pass Point</string>
+
+        <key>App.Commands.Rack.EraseAllRacksCommand</key>
+        <string>Delete&#xA;All PS</string>
+
+        <key>App.Commands.Rack.ExportRacksCommand</key>
+        <string>Export&#xA;PS</string>
+
+        <key>App.Commands.Rack.ImportRacksCommand</key>
+        <string>Import&#xA;PS</string>
+
+        <key>App.Commands.Routing.AllReRouteCommand</key>
+        <string>Re-Route&#xA;All</string>
+
+        <key>App.Commands.Routing.EraseAllRoutesCommand</key>
+        <string>Delete&#xA;All From-To</string>
+
+        <key>App.Commands.Routing.EraseSelectedRoutesCommand</key>
+        <string>Delete&#xA;From-To</string>
+
+        <key>App.Commands.Routing.ExportRoutingCommand</key>
+        <string>Export&#xA;From-To</string>
+
+        <key>App.Commands.Routing.FileRoutingCommand</key>
+        <string>Import&#xA;From-To</string>
+
+        <key>App.Commands.Routing.PickAndReRouteCommand</key>
+        <string>Re-Route&#xA;Selected</string>
+
+        <key>App.Commands.Routing.PickRoutingCommand</key>
+        <string>Pick&#xA;From-To</string>
+
+        <key>App.Commands.Routing.ReplaceFromToCommand</key>
+        <string>Replace&#xA;From-To</string>
+
+        <key>App.Commands.Selecting.GetSelectedFromToInfoCommand</key>
+        <string>Modify&#xA;From-To</string>
+
+        <key>App.Commands.Routing.ShowFrom_ToWindowCommand</key>
+        <string>From-To&#xA;Window</string>
+
+        <key>App.Commands.Routing.ShowFromTreeCommand</key>
+        <string>From-To&#xA;Tree</string>
+
+        <key>App.Commands.Routing.PickAndChangeFixedBopHeightCommand</key>
+        <string>Change&#xA;FixedBopHeight</string>
+
+
+        <!-- Transaction Names -->
+        <key>TransactionName.Commands.Initialization.Initialize</key>
+        <string>Setup Auto Routing</string>
+        <key>TransactionName.Commands.Initialization.CreateRoutingViews</key>
+        <string>Create Routing Views</string>
+
+        <key>TransactionName.Commands.Rack.EraseAll</key>
+        <string>Erase All Pipe Spaces</string>
+        <key>TransactionName.Commands.Rack.Import</key>
+        <string>Import Pipe Spaces</string>
+
+        <key>TransactionName.Commands.Routing.Common.Routing</key>
+        <string>Routing</string>
+
+        <key>TransactionName.Commands.Routing.Common.ChangeColor</key>
+        <string>Change Color for Highlighting</string>
+        <key>TransactionName.Commands.Routing.Common.RevertColor</key>
+        <string>Restore Color for Highlighting</string>
+
+        <key>TransactionName.Commands.Routing.PickRouting</key>
+        <string>Add From-To</string>
+
+        <key>TransactionName.Commands.Routing.RoutingFromFile</key>
+        <string>Import From-To</string>
+
+        <key>TransactionName.Commands.Routing.PickAndReRoute</key>
+        <string>Reroute Selected</string>
+
+        <key>TransactionName.Commands.Routing.RerouteAll</key>
+        <string>Reroute All</string>
+
+        <key>TransactionName.Commands.Routing.ReplaceFromTo</key>
+        <string>Change From-To</string>
+
+        <key>TransactionName.Commands.Routing.EraseSelectedRoutes</key>
+        <string>Erase Selected</string>
+
+        <key>TransactionName.Commands.Routing.EraseAllRoutes</key>
+        <string>Erase All From-Tos</string>
+
+        <key>TransactionName.Commands.Selecting.GetSelectedFromToInfo</key>
+        <string>Show Selected From-To Window</string>
+
+        <key>TransactionName.Commands.ShowFrom_ToWindowCommand</key>
+        <string>Show From-To Window</string>
+
+        <key>TransactionName.Commands.ShowFromTreeCommand</key>
+        <string>Show From-To Tree</string>
+
+        <key>TransactionName.Commands.PostCommands.ApplyChangeRouteNameCommand</key>
+        <string>Rename RouteName</string>
+
+        <key>TransactionName.Commands.Routing.PickAndChangeFixedBopHeightCommand</key>
+        <string>Change Route Height</string>
+
+
+        <!-- Dialogs -->
+        <key>Dialog.Commands.Initialization.Dialog.Title.Error</key>
+        <string>Routing Setup Error</string>
+        <key>Dialog.Commands.Initialization.Dialog.Body.Error.FailedToSetup</key>
+        <string>Failed to set up some routing families or parameters.</string>
+
+        <key>Dialog.Commands.Rack.PS.FileName</key>
+        <string>Pipe space list file</string>
+        <key>Dialog.Commands.Rack.PS.Title.Export</key>
+        <string>Export Pipe space list file</string>
+        <key>Dialog.Commands.Rack.PS.Title.Import</key>
+        <string>Import Pipe space list file</string>
+
+        <key>Dialog.Commands.Routing.PickRouting.PickFirst</key>
+        <string>Pick the FROM point of a from-to.</string>
+        <key>Dialog.Commands.Routing.PickRouting.PickSecond</key>
+        <string>Pick the TO point of a from-to.</string>
+
+        <key>Dialog.Commands.Routing.PickAndReRoute.Pick</key>
+        <string>Pick a from-to to reroute.</string>
+
+        <key>Dialog.Commands.Routing.ReplaceFromTo.Pick</key>
+        <string>Pick a from-to to change.</string>
+
+        <key>Dialog.Commands.Routing.ReplaceFromTo.SelectFromTo</key>
+        <string>Select which end is to be changed.</string>
+
+        <key>Dialog.Commands.Routing.ReplaceFromTo.SelectEndPoint</key>
+        <string>Select the new end point.</string>
+
+        <key>Dialog.Commands.Routing.FromTo.FileName</key>
+        <string>From-to list file</string>
+        <key>Dialog.Commands.Routing.FromTo.Title.Export</key>
+        <string>Export from-to list file</string>
+        <key>Dialog.Commands.Routing.FromTo.Title.Import</key>
+        <string>Import from-to list file</string>
+
+        <key>Dialog.Commands.PassPoint.Insert.Pick</key>
+        <string>Pick a from-to to insert a pass point.</string>
+
+        <key>Dialog.Commands.Routing.Dialog.Title.Error</key>
+        <string>Routing Error</string>
+        
+        <key>Dialog.Commands.Routing.Common.Body.Error.ExceptionOccured</key>
+        <string>An unhandled exception occured.</string>
+        <key>Dialog.Commands.Routing.Common.Body.Error.DeletedSomeFailedElements</key>
+        <string>Some elements cannot be created on routing.&#xA;Add pass points to generate valid route shape.</string>
+        <key>Dialog.Commands.Routing.Common.Body.Error.FittingCannotBeInserted</key>
+        <string>Some fitting elements could not be inserted on the following connectors:&#xA;&#xA;{0}</string>
+
+        <key>Dialog.Forms.SelectedFromToBase.ChangeFromTo</key>
+        <string>Do you want to change the From-To information?&#xA;If you change it, it will be automatically re-routed.</string>
+
+        <key>Dialog.Forms.FromToTree.Rename</key>
+        <string>Since the name is duplicated, please change it to another name.</string>
+
+
+        <key>Dialog.Forms.FromToEditControl.ProcessConstraints.None</key>
+        <string>Whichever</string>
+        <key>Dialog.Forms.FromToEditControl.ProcessConstraints.NoPocket</key>
+        <string>Don't avoid From-To</string>
+        <key>Dialog.Forms.FromToEditControl.ProcessConstraints.NoDrainPocket</key>
+        <string>Avoid on From-To</string>
+        <key>Dialog.Forms.FromToEditControl.ProcessConstraints.NoVentPocket</key>
+        <string>Avoid below From-To</string>
+        <key>Dialog.Commands.Draw.Common.Title.Error</key>
+        <string>Error</string>
+        <key>Dialog.Commands.Draw.Common.Body.Error</key>
+        <string>Your end point is almost equal to start point</string>
+
+        <!-- End Point Names -->
+        <key>EndPoint.DisplayTypeName.Connector</key>
+        <string>Connector</string>
+        <key>EndPoint.DisplayTypeName.PassPoint</key>
+        <string>Pass Point</string>
+        <key>EndPoint.DisplayTypeName.Route</key>
+        <string>Other From-to</string>
+        <key>EndPoint.DisplayTypeName.Terminal</key>
+        <string>Coordination</string>
+        <key>EndPoint.DisplayTypeName.PassPointBranch</key>
+        <string>Other From-to</string>
+
+        <!-- Parameter Names -->
+        <key>Revit.Property.Builtin.Width</key>
+        <string>Width</string>
+
+        <key>Revit.Property.Builtin.Height</key>
+        <string>Height</string>
+
+        <key>Revit.Property.Builtin.Length</key>
+        <string>Length</string>
+
+        <key>Revit.Property.Builtin.DiameterR1</key>
+        <string>Nominal Diameter r1</string>
+
+        <key>Revit.Property.Builtin.DiameterR2</key>
+        <string>Nominal Diameter r2</string>
+
+        <key>Revit.Property.Builtin.DiameterR3</key>
+        <string>Nominal Diameter r3</string>
+
+        <key>Revit.Property.Builtin.OffsetWidth</key>
+        <string>Offset Width</string>
+
+        <key>Revit.Property.Builtin.OffsetHeight</key>
+        <string>Offset Height</string>
+
+
+    </dict>
+</plist>

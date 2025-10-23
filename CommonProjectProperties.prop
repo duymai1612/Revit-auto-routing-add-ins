@@ -1,0 +1,93 @@
+<Project>
+    <PropertyGroup>
+        <CommonLibraryVersion>1.0.21.1214</CommonLibraryVersion>
+        <AssemblyVersion>$(CommonLibraryVersion)</AssemblyVersion>
+        <FileVersion>$(CommonLibraryVersion)</FileVersion>
+        <Version>$(CommonLibraryVersion)</Version>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Configurations>Debug 2019;Release 2019;Debug 2020;Release 2020;Debug 2021;Release 2021;Debug 2022;Release 2022</Configurations>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <LangVersion>9</LangVersion>
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <Platforms>x64</Platforms>
+        <Authors>Arent Inc.</Authors>
+    </PropertyGroup>
+
+    <Choose>
+        <When Condition=" $(Configuration.StartsWith('Debug ')) ">
+            <PropertyGroup>
+                <ConfigMode>Debug</ConfigMode>
+            </PropertyGroup>
+        </When>
+        <Otherwise>
+            <PropertyGroup>
+                <ConfigMode>Release</ConfigMode>
+            </PropertyGroup>
+        </Otherwise>
+    </Choose>
+    <Choose>
+        <When Condition=" $(Configuration.EndsWith(' 2019')) ">
+            <PropertyGroup>
+                <RevitVersion>2019</RevitVersion>
+                <TargetFramework>net47</TargetFramework>
+            </PropertyGroup>
+        </When>
+        <When Condition=" $(Configuration.EndsWith(' 2020')) ">
+            <PropertyGroup>
+                <RevitVersion>2020</RevitVersion>
+                <TargetFramework>net472</TargetFramework>
+            </PropertyGroup>
+        </When>
+        <When Condition=" $(Configuration.EndsWith(' 2021')) ">
+            <PropertyGroup>
+                <RevitVersion>2021</RevitVersion>
+                <TargetFramework>net48</TargetFramework>
+            </PropertyGroup>
+        </When>
+        <When Condition=" $(Configuration.EndsWith(' 2022')) ">
+            <PropertyGroup>
+                <RevitVersion>2022</RevitVersion>
+                <TargetFramework>net48</TargetFramework>
+            </PropertyGroup>
+        </When>
+        <Otherwise>
+            <PropertyGroup>
+                <RevitVersion>0</RevitVersion>
+                <TargetFramework>net48</TargetFramework>
+            </PropertyGroup>
+        </Otherwise>
+    </Choose>
+
+    <PropertyGroup>
+        <DefineConstants>$(DefineConstants);REVIT$(RevitVersion)</DefineConstants>
+        <OutputPath>bin\$(ConfigMode)\$(RevitVersion)\</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="2019 &lt;= $(RevitVersion)">
+        <DefineConstants>$(DefineConstants);REVIT2019_OR_GREATER</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="2019 &gt;= $(RevitVersion)">
+        <DefineConstants>$(DefineConstants);REVIT2019_OR_LESS</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="2020 &lt;= $(RevitVersion)">
+        <DefineConstants>$(DefineConstants);REVIT2020_OR_GREATER</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="2020 &gt;= $(RevitVersion)">
+        <DefineConstants>$(DefineConstants);REVIT2020_OR_LESS</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="2021 &lt;= $(RevitVersion)">
+        <DefineConstants>$(DefineConstants);REVIT2021_OR_GREATER</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="2021 &gt;= $(RevitVersion)">
+        <DefineConstants>$(DefineConstants);REVIT2021_OR_LESS</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="2022 &lt;= $(RevitVersion)">
+        <DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="2022 &gt;= $(RevitVersion)">
+        <DefineConstants>$(DefineConstants);REVIT2022_OR_LESS</DefineConstants>
+    </PropertyGroup>
+</Project>

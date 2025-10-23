@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(SolutionDir)CommonProjectProperties.prop" />
+
+  <PropertyGroup>
+    <OutputPath>bin\$(ConfigMode)\$(RevitVersion)\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Architecture.Routing.Core, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Architecture.Routing.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Collision, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Collision.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Geometry, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Math, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Revit, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Revit.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Utility, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit $(RevitVersion)\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets" />
+    <None Update="Assets\SharedParameterFile\*.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+
+    <None Update="Assets\Families\$(RevitVersion)\*.rfa">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+
+    <None Update="Assets\Families\2021\Routing Shaft.rfa">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+
+    <None Update="Assets\Families\2021\Routing Rack Space.rfa">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NPOI" Version="2.5.5" />
+  </ItemGroup>
+
+</Project>

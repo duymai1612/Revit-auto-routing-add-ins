@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <Import Project="$(SolutionDir)CommonProjectProperties.prop" />
+
+  <PropertyGroup>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Arent3d.Architecture.Routing.AppBase</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputPath>bin\$(ConfigMode)\$(RevitVersion)\</OutputPath>
+    <RevitPath>C:\Program Files\Autodesk\Revit $(RevitVersion)\</RevitPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Forms\UserControls\**" />
+    <EmbeddedResource Remove="Forms\UserControls\**" />
+    <None Remove="Forms\UserControls\**" />
+    <Page Remove="Forms\UserControls\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arent3d.Architecture.Routing\Arent3d.Architecture.Routing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Architecture.Routing.Core, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Architecture.Routing.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.RevitAddinUtil, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.RevitAddinUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Math, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Utility, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Revit, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Revit.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Revit.Csv, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Revit.Csv.dll</HintPath>
+    </Reference>
+    <Reference Include="Arent3d.Revit.UI, Version=$(CommonLibraryVersion), Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\Arent3d.Revit.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper">
+      <HintPath>..\lib\$(RevitVersion)\$(TargetFramework)\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RevitAPI">
+      <HintPath>$(RevitPath)RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(RevitPath)RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AdWindows">
+      <HintPath>$(RevitPath)AdWindows.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="resources\Arent-Generic Models-Box.rfa" />
+    <None Update="Arent3d.Architecture.Routing.AppBase\Lang\en-US.plist">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Arent3d.Architecture.Routing.AppBase\Lang\ja-JP.plist">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NPOI" Version="2.5.5" />
+    <PackageReference Include="NumericUpDown" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\InsertBranchPoint.png" />
+    <Resource Include="resources\InsertPassPoint.png" />
+    <Resource Include="resources\MEP.ico" />
+    <Resource Include="resources\PickFrom-To.png" />
+  </ItemGroup>
+
+</Project>
